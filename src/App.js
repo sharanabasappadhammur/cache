@@ -1,7 +1,7 @@
 // import Todo from "./Todo";
 // import React, { createContext, useState } from "react";
 
-import "./App.css"
+import "./App.css";
 
 // import { useState } from "react";
 
@@ -52,10 +52,20 @@ function App() {
   //   console.log(myMap.get("key1")); // Output: 'value1'
   // };
 
+  console.log(navigator);
+
+  if ("serviceWorker" in navigator) {
+    console.log("remove service worker");
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((registration) => {
+        registration.unregister();
+      });
+    });
+  }
+
   return (
     <div className="App">
-      3
-      {/* <input onChange={(e) => handlechh(e)} /> */}
+      5{/* <input onChange={(e) => handlechh(e)} /> */}
       {/* <button onClick={click1}>click1</button>
       <button onClick={click2}>click2</button>
       <button onClick={click3}>click2</button> */}
@@ -66,7 +76,6 @@ function App() {
       ></div> */}
       {/* <div onClick={() => handleClick()}>click here</div> */}
       {/* <input onChange={(e) => handleChange(e.target.value)} /> */}
-
       {/* <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
