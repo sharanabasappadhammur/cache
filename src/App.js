@@ -55,7 +55,6 @@ function App() {
   console.log(navigator);
 
   if ("serviceWorker" in navigator) {
-    console.log("remove service worker");
     navigator.serviceWorker.getRegistrations().then((registrations) => {
       registrations.forEach((registration) => {
         registration.unregister();
