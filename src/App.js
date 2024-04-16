@@ -52,15 +52,15 @@ function App() {
   //   console.log(myMap.get("key1")); // Output: 'value1'
   // };
 
-  console.log(navigator);
+  // console.log(navigator);
 
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      registrations.forEach((registration) => {
-        registration.unregister();
-      });
-    });
-  }
+  // if ("serviceWorker" in navigator) {
+  //   navigator.serviceWorker.getRegistrations().then((registrations) => {
+  //     registrations.forEach((registration) => {
+  //       registration.unregister();
+  //     });
+  //   });
+  // }
 
   return (
     <div className="App">
