@@ -54,17 +54,17 @@ function App() {
 
   // console.log(navigator);
 
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      registrations.forEach((registration) => {
-        registration.unregister();
-      });
-    });
-  }
+  // if ("serviceWorker" in navigator) {
+  //   navigator.serviceWorker.getRegistrations().then((registrations) => {
+  //     registrations.forEach((registration) => {
+  //       registration.unregister();
+  //     });
+  //   });
+  // }
 
   return (
     <div className="App">
-      5
+      6
       {/* <input onChange={(e) => handlechh(e)} /> */}
       {/* <button onClick={click1}>click1</button>
       <button onClick={click2}>click2</button>
