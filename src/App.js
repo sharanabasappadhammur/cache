@@ -11,7 +11,7 @@ function App() {
     });
   }
 
-  return <div className="App">7</div>;
+  return <div className="App">8</div>;
 }
 
 export default App;
