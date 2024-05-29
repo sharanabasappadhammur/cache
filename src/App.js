@@ -1,5 +1,5 @@
 import "./App.css";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+// import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 function App() {
   if ("serviceWorker" in navigator) {
@@ -14,4 +14,4 @@ function App() {
 }
 
 export default App;
-serviceWorkerRegistration.register();
+// serviceWorkerRegistration.register();
