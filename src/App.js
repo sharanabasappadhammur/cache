@@ -1,4 +1,6 @@
 import "./App.css";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+
 function App() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
@@ -8,7 +10,8 @@ function App() {
     });
   }
 
-  return <div className="App">4</div>;
+  return <div className="App">1</div>;
 }
 
 export default App;
+serviceWorkerRegistration.register();
