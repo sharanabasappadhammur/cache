@@ -20,7 +20,7 @@ const isLocalhost = Boolean(
     )
 );
 
-console.log("155151")
+console.log("155151");
 
 export function register(config) {
   if ("serviceWorker" in navigator) {
@@ -60,6 +60,7 @@ export function register(config) {
 }
 
 function registerValidSW(swUrl, config) {
+  console.log(222222);
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
