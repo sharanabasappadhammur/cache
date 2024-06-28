@@ -1,34 +1,67 @@
+[12:45 PM] Shreenivas K
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
-
-    <style>
-      body {
-        position: relative !important;
-        top: 0px !important;
-      }
-    </style>
-    <script>
-      // navigator.serviceWorker.register(`/service-worker.js?v=${200}`);
-    </script>
-
-    <title class="font-bold">cache</title>
-  </head>
-
-  <body>
-    <div>test</div>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+ 
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Test Meta Pooja2</title>
+</head>
+ 
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    // JavaScript to dynamically set meta tags based on condition
+ 
+    // Condition to determine if it's dev or prod
+    const isDev = window.location.hostname === 'localhost'; // Example condition, replace with your own
+ 
+    // Meta tags for dev
+    const devMetaTags = [
+      { name: 'description', content: 'Development environment description' },
+      { property: 'og:title', content: 'Development title' },
+      { property: 'og:description', content: 'Development environment description' },
+      { property: 'og:url', content: 'http://localhost:3000' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: 'https://via.placeholder.com/150' }
+    ];
+ 
+    // Meta tags for prod
+    const prodMetaTags = [
+      { name: 'description', content: 'This app provides end-to-end information about the Global Coffee Industry' },
+      { property: 'og:title', content: 'https://silly-sunburst-8de3f8.netlify.app/' },
+      { property: 'og:description', content: 'This app provides end-to-end information about the Global Coffee Industry' },
+      { property: 'og:url', content: 'https://silly-sunburst-8de3f8.netlify.app/' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: 'https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeeweb_menu_icons/CoffeeWeb_Logo_White_Background_Blue_Text.png' }
+    ];
+ 
+    // Function to set meta tags
+    function setMetaTags(metaTags) {
+      metaTags.forEach(tag => {
+        let metaElement = document.querySelector(`meta[${tag.name ? 'name' : 'property'}="${tag.name || tag.property}"]`);
+        if (metaElement) {
+          metaElement.setAttribute('content', tag.content);
+        } else {
+          metaElement = document.createElement('meta');
+          metaElement.setAttribute(tag.name ? 'name' : 'property', tag.name || tag.property);
+          metaElement.setAttribute('content', tag.content);
+          document.head.appendChild(metaElement);
+        }
+      });
+    }
+ 
+    // Set the appropriate meta tags based on the condition
+    if (isDev) {
+      setMetaTags(devMetaTags);
+    } else {
+      setMetaTags(prodMetaTags);
+    }
+  </script>
+</body>
+ 
 </html>
