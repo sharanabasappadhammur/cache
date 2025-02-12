@@ -113,7 +113,7 @@ const NewsReadMore1 = () => {
         <meta property="og:image" content={news.imageUrl} />
         <meta
           property="og:url"
-          content={`https://majestic-blancmange-b8082b.netlify.app/news${news.id}`}
+          content={`https://cache-taupe.vercel.app/${news.id}`}
         />
       </Helmet>
 
@@ -143,7 +143,7 @@ const NewsReadMore2 = () => {
         <meta property="og:image" content={news.imageUrl} />
         <meta
           property="og:url"
-          content={`https://majestic-blancmange-b8082b.netlify.app/news${news.id}`}
+          content={`https://cache-taupe.vercel.app/${news.id}`}
         />
       </Helmet>
 
