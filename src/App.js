@@ -24,7 +24,7 @@ const App = () => {
         <meta property="og:type" content="article" />
         <title>{"news.title"}</title>
       </Helmet>
-      <h1>Welcome to Your Website1111</h1>
+      <h1>Welcome to Your Website2222</h1>
       <p>Some content goes here...</p>
     </div>
   );
