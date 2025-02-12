@@ -61,6 +61,7 @@ import {
   // useParams
 } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import useMetaTags from "./UseMetaTags";
 
 const newsList = [
   {
@@ -87,8 +88,8 @@ const NewsFeed = () => {
       {newsList.map((news) => (
         <div key={news.id}>
           <h2>{news.title}</h2>
-          <a href={`/news${news.id}`}>Read More11</a>
-          <a href={`/news${news.id}`}>Read More22</a>
+          <a href={`/news${news.id}`}>Read More11111</a>
+          <a href={`/news${news.id}`}>Read More22222</a>
         </div>
       ))}
     </div>
