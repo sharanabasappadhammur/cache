@@ -159,8 +159,8 @@ const App = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={NewsFeed} />
-      <Route path="/news1" component={NewsReadMore1} />
-      <Route path="/news2" component={NewsReadMore2} />
+      <Route exact path="/news1" component={NewsReadMore1} />
+      <Route exact path="/news2" component={NewsReadMore2} />
     </Switch>
   </Router>
 );
