@@ -111,6 +111,7 @@ const NewsReadMore1 = () => {
         <meta property="og:title" content={news.title} />
         <meta property="og:description" content={news.description} />
         <meta property="og:image" content={news.imageUrl} />
+        <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content={`https://cache-taupe.vercel.app/news${news.id}`}
@@ -138,9 +139,17 @@ const NewsReadMore2 = () => {
   return (
     <>
       <Helmet>
+        {/* <meta name="description" content="This app provides end-to-end information about the Global Coffee Industry">
+    <meta property="og:title" content="https://dev-pwa.devptest.com">
+    <meta property="og:description" content="This app provides end-to-end information about the Global Coffee Industry">
+    <meta property="og:url" content="https://dev-pwa.devptest.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeeweb_menu_icons/CoffeeWeb_Logo_White_Background_Blue_Text.png"> */}
+
         <meta property="og:title" content={news.title} />
         <meta property="og:description" content={news.description} />
         <meta property="og:image" content={news.imageUrl} />
+        <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content={`https://cache-taupe.vercel.app/news${news.id}`}
