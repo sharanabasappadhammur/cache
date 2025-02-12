@@ -87,28 +87,52 @@ const NewsFeed = () => {
       {newsList.map((news) => (
         <div key={news.id}>
           <h2>{news.title}</h2>
-          <a href={`/news/${news.id}`}>Read More</a>
+          <a href={`/news${news.id}`}>Read More</a>
         </div>
       ))}
     </div>
   );
 };
 
-const NewsReadMore = () => {
+const NewsReadMore1 = () => {
   const { id } = useParams(); // Get the news ID from the URL
-  // const news = {
-  //   id: 1,
-  //   title: "News 1",
-  //   description: "Description 1",
-  //   imageUrl: "https://example.com/image1.jpg"
-  // }; // Fetch news data based on the ID
+  const news = {
+    id: 1,
+    title: "News 1",
+    description: "Description 1",
+    imageUrl:
+      "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png"
+  };
 
-  const [news, setNews] = useState({});
-  useEffect(() => {
-    if (id) {
-      setNews(newsList[id - 1]);
-    }
-  }, [id]);
+  return (
+    <>
+      <Helmet>
+        <meta property="og:title" content={news.title} />
+        <meta property="og:description" content={news.description} />
+        <meta property="og:image" content={news.imageUrl} />
+        <meta
+          property="og:url"
+          content={`https://majestic-blancmange-b8082b.netlify.app/${news.id}`}
+        />
+      </Helmet>
+
+      <div>
+        <h1>{news.title}</h1>
+        <img src={news.imageUrl} alt={news.title} />
+        <p>{news.description}</p>
+      </div>
+    </>
+  );
+};
+const NewsReadMore2 = () => {
+  const { id } = useParams(); // Get the news ID from the URL
+  const news = {
+    id: 2,
+    title: "News 2",
+    description: "Description 2",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s"
+  };
 
   return (
     <>
@@ -135,7 +159,8 @@ const App = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={NewsFeed} />
-      <Route path="/news/:id" component={NewsReadMore} />
+      <Route path="/news1" component={NewsReadMore1} />
+      <Route path="/news2" component={NewsReadMore2} />
     </Switch>
   </Router>
 );
