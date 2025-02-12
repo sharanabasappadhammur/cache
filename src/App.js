@@ -88,6 +88,7 @@ const NewsFeed = () => {
         <div key={news.id}>
           <h2>{news.title}</h2>
           <a href={`/news${news.id}`}>Read More</a>
+          <a href={`/news${news.id}`}>Read More</a>
         </div>
       ))}
     </div>
