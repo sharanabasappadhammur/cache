@@ -3,12 +3,13 @@ import useMetaTags from "./UseMetaTags";
 import { Helmet } from "react-helmet";
 
 const App = () => {
-  useMetaTags({
-    title: "Your Website Title",
-    description: "A brief description of your website",
-    image: "https://coffeeweb.s3.ap-south-1.amazonaws.com/devtestlogo.png",
-    url: "https://silly-sunburst-8de3f8.netlify.app/"
-  });
+  // useMetaTags({
+  //   title: "Your Website Title",
+  //   description: "A brief description of your website",
+  //   image:
+  //     "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png",
+  //   url: "https://silly-sunburst-8de3f8.netlify.app/"
+  // });
 
   return (
     <div>
