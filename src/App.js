@@ -105,8 +105,10 @@ const NewsReadMore = () => {
 
   const [news, setNews] = useState({});
   useEffect(() => {
-    setNews(newsList[id - 1]);
-  }, []);
+    if (id) {
+      setNews(newsList[id - 1]);
+    }
+  }, [id]);
 
   return (
     <>
