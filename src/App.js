@@ -56,9 +56,9 @@
 import { Helmet } from "react-helmet";
 import {
   BrowserRouter as Router,
-  Route,
+  Route
   // Routes,
-  useParams
+  // useParams
 } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 
