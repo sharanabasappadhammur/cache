@@ -87,8 +87,8 @@ const NewsFeed = () => {
       {newsList.map((news) => (
         <div key={news.id}>
           <h2>{news.title}</h2>
-          <a href={`/news${news.id}`}>Read More</a>
-          <a href={`/news${news.id}`}>Read More</a>
+          <a href={`/news${news.id}`}>Read More1</a>
+          <a href={`/news${news.id}`}>Read More2</a>
         </div>
       ))}
     </div>
