@@ -1,5 +1,5 @@
 import React from "react";
-import useMetaTags from "./UseMetaTags";
+// import useMetaTags from "./UseMetaTags";
 import { Helmet } from "react-helmet";
 
 const App = () => {
