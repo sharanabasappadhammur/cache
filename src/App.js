@@ -1,56 +1,141 @@
-import React, { useEffect } from "react";
-// import { useMetaTags } from "./UseMetaTags";
+// import React, { useEffect } from "react";
+// import useMetaTags from "./UseMetaTags";
 // import { Helmet } from "react-helmet";
 
-const App = () => {
-  // useEffect(() => {
-  //   useMetaTags({
-  //     title: "Your Website Title",
-  //     description: "A brief description of your website",
-  //     image:
-  //       "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png",
-  //     url: "https://silly-sunburst-8de3f8.netlify.app/"
-  //   });
-  // }, []);
+// const App = () => {
+//   // useEffect(() => {
+//   //   useMetaTags({
+//   //     title: "Your Website Title",
+//   //     description: "A brief description of your website",
+//   //     image:
+//   //       "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png",
+//   //     url: "https://silly-sunburst-8de3f8.netlify.app/"
+//   //   });
+//   // }, []);
 
-  useEffect(() => {
-    // Create and append the og:image meta tag
-    const ogImageTag = document.createElement("meta");
-    ogImageTag.setAttribute("property", "og:image");
-    ogImageTag.content =
-      "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png"; // Replace with dynamic image URL
-    document.head.appendChild(ogImageTag);
+//   const imageUrl =
+//     "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png";
 
-    // Create and append the og:url meta tag
-    const ogUrlTag = document.createElement("meta");
-    ogUrlTag.setAttribute("property", "og:url");
-    ogUrlTag.content = "https://majestic-blancmange-b8082b.netlify.app/"; // Replace with dynamic page URL
-    document.head.appendChild(ogUrlTag);
+//   const url = "https://silly-sunburst-8de3f8.netlify.app/";
 
-    // Cleanup: Remove the meta tags when the component unmounts
-    return () => {
-      document.head.removeChild(ogImageTag);
-      document.head.removeChild(ogUrlTag);
-    };
-  }, []); // Empty dependency array means this will run only once when the component mounts
+//   return (
+//     <div>
+//       {/* <Helmet>
+//         <meta property="og:title" content={"Loading..."} />
+//         <meta property="og:description" content={"Loading..."} />
+//         <meta property="og:image" content={"/default-image.jpg"} />
+//         <meta
+//           property="og:url"
+//           content="https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png"
+//         />
+//         <meta property="og:type" content="article" />
+//         <title>{"news.title"}</title>
+//       </Helmet> */}
+
+//       {/* Open Graph Meta Tags */}
+//       {/* <Helmet>
+//         <meta property="og:title" content={"title"} />
+//         <meta property="og:description" content={"description"} />
+//         <meta property="og:image" content={imageUrl} />
+//         <meta property="og:url" content={url} />
+//         <meta property="og:type" content="article" />
+//       </Helmet> */}
+//       <Router>
+//         <Routes>
+//           <Route path="/" element={<NewsFeed />} />
+//           <Route path="/news/:id" element={<NewsReadMore />} />
+//         </Routes>
+//       </Router>
+//     </div>
+//   );
+// };
+
+// export default App;
+import { useState } from "react";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useParams
+} from "react-router-dom";
+import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+
+const newsList = [
+  {
+    id: 1,
+    title: "News 1",
+    description: "Description 1",
+    imageUrl:
+      "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png"
+  },
+  {
+    id: 2,
+    title: "News 2",
+    description: "Description 2",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s"
+  }
+];
+
+const NewsFeed = () => {
+  // Fetch and display a list of news articles
 
   return (
     <div>
-      {/* <Helmet>
-        <meta property="og:title" content={"Loading..."} />
-        <meta property="og:description" content={"Loading..."} />
-        <meta property="og:image" content={"/default-image.jpg"} />
-        <meta
-          property="og:url"
-          content="https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png"
-        />
-        <meta property="og:type" content="article" />
-        <title>{"news.title"}</title>
-      </Helmet> */}
-      <h1>Welcome to Your Website33333</h1>
-      <p>Some content goes here...</p>
+      {newsList.map((news) => (
+        <div key={news.id}>
+          <h2>{news.title}</h2>
+          <a href={`/news/${news.id}`}>Read More</a>
+        </div>
+      ))}
     </div>
   );
 };
+
+const NewsReadMore = () => {
+  const { id } = useParams(); // Get the news ID from the URL
+  // const news = {
+  //   id: 1,
+  //   title: "News 1",
+  //   description: "Description 1",
+  //   imageUrl: "https://example.com/image1.jpg"
+  // }; // Fetch news data based on the ID
+
+  const [news, setNews] = useState({});
+  useEffect(() => {
+    setNews(newsList[id - 1]);
+  }, []);
+
+  return (
+    <>
+      <Helmet>
+        <meta property="og:title" content={news.title} />
+        <meta property="og:description" content={news.description} />
+        <meta property="og:image" content={news.imageUrl} />
+        <meta
+          property="og:url"
+          content={`https://majestic-blancmange-b8082b.netlify.app/${news.id}`}
+        />
+      </Helmet>
+
+      <div>
+        <h1>{news.title}</h1>
+        <img src={news.imageUrl} alt={news.title} />
+        <p>{news.description}</p>
+      </div>
+    </>
+  );
+};
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={NewsFeed} />
+      <Route path="/news/:id" component={NewsReadMore} />
+    </Switch>
+  </Router>
+);
 
 export default App;
