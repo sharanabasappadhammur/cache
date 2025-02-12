@@ -105,13 +105,13 @@ const NewsReadMore1 = () => {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s"
   };
 
-  // useMetaTags({
-  //   title: "Your Website Title",
-  //   description: "A brief description of your website",
-  //   image:
-  //     "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png",
-  //   url: "https://cache-taupe.vercel.app"
-  // });
+  useMetaTags({
+    title: "Your Website Title",
+    description: "A brief description of your website",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s",
+    url: "https://cache-taupe.vercel.app"
+  });
 
   return (
     <>
@@ -140,23 +140,22 @@ const NewsReadMore2 = () => {
     imageUrl: "https://sample-videos.com/img/Sample-jpg-image-100kb.jpg"
   };
 
-  // useMetaTags({
-  //   title: "Your Website Title",
-  //   description: "A brief description of your website",
-  //   image:
-  //     "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png",
-  //   url: "https://cache-taupe.vercel.app"
-  // });
+  useMetaTags({
+    title: "Your Website Title",
+    description: "A brief description of your website",
+    image: "https://sample-videos.com/img/Sample-jpg-image-100kb.jpg",
+    url: "https://cache-taupe.vercel.app"
+  });
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta property="og:title" content={news.title} />
         <meta property="og:description" content={news.description} />
         <meta property="og:image" content={news.imageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://cache-taupe.vercel.app`} />
-      </Helmet>
+      </Helmet> */}
 
       <div>
         <h1>{news.title}</h1>
