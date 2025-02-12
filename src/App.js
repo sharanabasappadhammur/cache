@@ -105,15 +105,23 @@ const NewsReadMore1 = () => {
       "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png"
   };
 
+  useMetaTags({
+    title: "Your Website Title",
+    description: "A brief description of your website",
+    image:
+      "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png",
+    url: "https://cache-taupe.vercel.app"
+  });
+
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta property="og:title" content={news.title} />
         <meta property="og:description" content={news.description} />
         <meta property="og:image" content={news.imageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://cache-taupe.vercel.app`} />
-      </Helmet>
+      </Helmet> */}
 
       <div>
         <h1>{news.title}</h1>
@@ -133,22 +141,30 @@ const NewsReadMore2 = () => {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s"
   };
 
+  useMetaTags({
+    title: "Your Website Title",
+    description: "A brief description of your website",
+    image:
+      "https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeenewsfeeds/Uptrend.png",
+    url: "https://cache-taupe.vercel.app"
+  });
+
   return (
     <>
-      <Helmet>
-        {/* <meta name="description" content="This app provides end-to-end information about the Global Coffee Industry">
+      {/* <Helmet> */}
+      {/* <meta name="description" content="This app provides end-to-end information about the Global Coffee Industry">
     <meta property="og:title" content="https://dev-pwa.devptest.com">
     <meta property="og:description" content="This app provides end-to-end information about the Global Coffee Industry">
     <meta property="og:url" content="https://dev-pwa.devptest.com">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeeweb_menu_icons/CoffeeWeb_Logo_White_Background_Blue_Text.png"> */}
 
-        <meta property="og:title" content={news.title} />
+      {/* <meta property="og:title" content={news.title} />
         <meta property="og:description" content={news.description} />
         <meta property="og:image" content={news.imageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://cache-taupe.vercel.app`} />
-      </Helmet>
+      </Helmet> */}
 
       <div>
         <h1>{news.title}</h1>
