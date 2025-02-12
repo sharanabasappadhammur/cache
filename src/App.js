@@ -51,8 +51,8 @@
 // };
 
 // export default App;
-import { useState } from "react";
-import { useEffect } from "react";
+// import { useState } from "react";
+// import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import {
   BrowserRouter as Router,
@@ -95,7 +95,7 @@ const NewsFeed = () => {
 };
 
 const NewsReadMore1 = () => {
-  const { id } = useParams(); // Get the news ID from the URL
+  // const { id } = useParams(); // Get the news ID from the URL
   const news = {
     id: 1,
     title: "News 1",
@@ -125,7 +125,7 @@ const NewsReadMore1 = () => {
   );
 };
 const NewsReadMore2 = () => {
-  const { id } = useParams(); // Get the news ID from the URL
+  // const { id } = useParams(); // Get the news ID from the URL
   const news = {
     id: 2,
     title: "News 2",
