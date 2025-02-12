@@ -61,6 +61,7 @@ import {
   // useParams
 } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import useMetaTags from "./UseMetaTags";
 // import useMetaTags from "./UseMetaTags";
 
 const newsList = [
