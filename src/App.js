@@ -18,7 +18,7 @@
 //   return (
 //     <div>
 //       <div>
-//         <ChartComponent />  
+//         <ChartComponent />
 //         {/* <h1>Current Count: {count}</h1>
 //         <h1>Current Count2: {count2}</h1>
 //         <h2>Previous Count: {prevCountRef.current}</h2>
@@ -30,20 +30,20 @@
 
 // export default App;
 // App.js
-import React from 'react';
-import useMetaTags from './UseMetaTags';
+import React from "react";
+import useMetaTags from "./UseMetaTags";
 
 const App = () => {
   useMetaTags({
-    title: 'Your Website Title',
-    description: 'A brief description of your website',
-    image: 'https://coffeeweb.s3.ap-south-1.amazonaws.com/devtestlogo.png',
-    url: 'https://silly-sunburst-8de3f8.netlify.app/',
+    title: "Your Website Title",
+    description: "A brief description of your website",
+    image: "https://coffeeweb.s3.ap-south-1.amazonaws.com/devtestlogo.png",
+    url: "https://silly-sunburst-8de3f8.netlify.app/"
   });
 
   return (
     <div>
-      <h1>Welcome to Your Website</h1>
+      <h1>Welcome to Your Website.....</h1>
       <p>Some content goes here...</p>
     </div>
   );
