@@ -24,7 +24,7 @@ const App = () => {
     // Create and append the og:url meta tag
     const ogUrlTag = document.createElement("meta");
     ogUrlTag.setAttribute("property", "og:url");
-    ogUrlTag.content = "https://silly-sunburst-8de3f8.netlify.app"; // Replace with dynamic page URL
+    ogUrlTag.content = "https://majestic-blancmange-b8082b.netlify.app/"; // Replace with dynamic page URL
     document.head.appendChild(ogUrlTag);
 
     // Cleanup: Remove the meta tags when the component unmounts
@@ -47,7 +47,7 @@ const App = () => {
         <meta property="og:type" content="article" />
         <title>{"news.title"}</title>
       </Helmet> */}
-      <h1>Welcome to Your Website2222</h1>
+      <h1>Welcome to Your Website33333</h1>
       <p>Some content goes here...</p>
     </div>
   );
