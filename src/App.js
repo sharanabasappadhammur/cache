@@ -112,7 +112,7 @@ const NewsReadMore1 = () => {
         <meta property="og:image" content={news.imageUrl} />
         <meta
           property="og:url"
-          content={`https://majestic-blancmange-b8082b.netlify.app/${news.id}`}
+          content={`https://majestic-blancmange-b8082b.netlify.app/news${news.id}`}
         />
       </Helmet>
 
@@ -142,7 +142,7 @@ const NewsReadMore2 = () => {
         <meta property="og:image" content={news.imageUrl} />
         <meta
           property="og:url"
-          content={`https://majestic-blancmange-b8082b.netlify.app/${news.id}`}
+          content={`https://majestic-blancmange-b8082b.netlify.app/news${news.id}`}
         />
       </Helmet>
 
