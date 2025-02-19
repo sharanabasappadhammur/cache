@@ -16,7 +16,7 @@ import React, { useEffect } from "react";
 // import Landing from "../components/Section/Landing";
 // import { firebaseAnalytics } from "../firebaseConfig";
 import MetaDecorator from "../components/Util/MetaDecorator";
-import metaThumbnail from "../data/images/meta/home.png";
+// import metaThumbnail from "../data/images/meta/home.png";
 
 const content = require("../data/content.json");
 
