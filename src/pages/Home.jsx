@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import MetaDecorator from "../components/Utils/MetaDecorator";
 // import Container from "../components/Util/Container";
 // import NavigationBar from "../components/Navbar/NavigationBar";
 // import {
@@ -7,7 +6,7 @@ import MetaDecorator from "../components/Utils/MetaDecorator";
 //   footerPadding,
 //   skillsBackground,
 //   noMargin
-// } from "../stylesheets/Home.module.sass";
+// } from "../stylesheets/Home.scss";
 // import Footer from "../components/Footer/Footer";
 // import HorizontalRuler from "../components/Util/HorizontalRuler";
 // import AboutMe from "../components/Section/AboutMe";
@@ -16,33 +15,33 @@ import MetaDecorator from "../components/Utils/MetaDecorator";
 // import BlogShowcase from "../components/Section/BlogShowcase";
 // import Landing from "../components/Section/Landing";
 // import { firebaseAnalytics } from "../firebaseConfig";
-// import MetaDecorator from "../components/Util/MetaDecorator";
-// import metaThumbnail from "../data/images/meta/home.png";
+import MetaDecorator from "../components/Util/MetaDecorator";
+import metaThumbnail from "../data/images/meta/home.png";
 
 const content = require("../data/content.json");
 
 const Home = () => {
   // const horizontalRuler = (
-  //   <div className={skillsBackground}>
+  //   <div className="skillsBackground">
   //     <Container>
-  //       <HorizontalRuler isThick className={noMargin} />
+  //       <HorizontalRuler isThick className="noMargin" />
   //     </Container>
   //   </div>
   // );
 
-  // useEffect(() => {
-  //   firebaseAnalytics.logEvent("homepage_visited");
-  // });
+  useEffect(() => {
+    // firebaseAnalytics.logEvent("homepage_visited");
+  });
 
   return (
     <>
-      <div>hello</div>
       <MetaDecorator
         description={content.pageDescription}
         title={content.pageTitle}
-        imageUrl="https://coffeeweb.s3.amazonaws.com/h12is0ip.mvg-Screenshot-2025-02-12-230607-(1).png"
+        imageUrl={metaThumbnail}
         imageAlt={content.metaImageAlt}
       />
+      <div>hello</div>
       {/* <NavigationBar />
       <Landing
         id={content.landingReference}

@@ -111,7 +111,7 @@ It's a good practise to keep components reusable. Notice how it now requires you
 <Code language="javascript">
 import React, { useEffect, useState } from "react";
 import { GoStar, GoRepoForked } from "react-icons/go";
-import { numbers, main, innerMain } from "../stylesheets/components/GithubStatistics.module.sass";
+import { numbers, main, innerMain } from "../stylesheets/components/GithubStatistics.scss";
 &nbsp;
 const GithubStatistics = ({ username, repo, className }) => {
   const [githubStats, setGithubStats] = useState({

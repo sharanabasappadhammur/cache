@@ -7,8 +7,8 @@
 //   blogPostBody,
 //   blogPostNavbarMargin,
 //   footerStyle,
-//   width,
-// } from "../stylesheets/BlogPost.module.sass";
+//   width
+// } from "../stylesheets/BlogPost.scss";
 // import { getInitialTheme } from "../utils/FileManager.utils";
 // import BlogFooter from "../components/Footer/BlogFooter";
 // import HorizontalRuler from "../components/Util/HorizontalRuler";
@@ -74,7 +74,11 @@
 //           {post === "" ? (
 //             <LoadingIndicator isDark={isDark} />
 //           ) : (
-//             <BlogPostMarkdown content={post} isDark={isDark} fileName={blogPostFileName} />
+//             <BlogPostMarkdown
+//               content={post}
+//               isDark={isDark}
+//               fileName={blogPostFileName}
+//             />
 //           )}
 
 //           <HorizontalRuler isDark={isDark} />

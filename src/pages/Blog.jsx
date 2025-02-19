@@ -14,8 +14,8 @@
 //   footerStyle,
 //   noMargin,
 //   profilePicture,
-//   verticalCenter,
-// } from "../stylesheets/Blog.module.sass";
+//   verticalCenter
+// } from "../stylesheets/Blog.scss";
 // import { getInitialTheme } from "../utils/FileManager.utils";
 // import BlogFooter from "../components/Footer/BlogFooter";
 // import HorizontalRuler from "../components/Util/HorizontalRuler";
@@ -75,8 +75,14 @@
 //             />
 //           </div>
 //           <div className={`${isDark && blogDark}`}>
-//             <p className={`${blogTitleFont} ${noMargin} ${fontColorTransition}`}>{blog.title}</p>
-//             <p className={`${blogSubtitleFont} ${noMargin} ${fontColorTransition}`}>
+//             <p
+//               className={`${blogTitleFont} ${noMargin} ${fontColorTransition}`}
+//             >
+//               {blog.title}
+//             </p>
+//             <p
+//               className={`${blogSubtitleFont} ${noMargin} ${fontColorTransition}`}
+//             >
 //               {blog.subtitle}
 //             </p>
 //           </div>
