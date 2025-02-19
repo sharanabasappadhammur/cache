@@ -63,6 +63,7 @@ import {
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 // import useMetaTags from "./UseMetaTags";
 // import useMetaTags from "./UseMetaTags";
+import { Helmet } from "react-helmet-async";
 
 const newsList = [
   {
@@ -149,6 +150,8 @@ const NewsReadMore2 = () => {
   //   url: "https://cache-taupe.vercel.app"
   // });
 
+  const ogImage = `https://coffeeweb.s3.amazonaws.com/h12is0ip.mvg-Screenshot-2025-02-12-230607-(1).png`;
+
   return (
     <>
       {/* <Helmet>
@@ -158,6 +161,11 @@ const NewsReadMore2 = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://cache-taupe.vercel.app`} />
       </Helmet> */}
+
+      <Helmet>
+        <title>Coffee News</title>
+        <meta property="og:image" content={ogImage} />
+      </Helmet>
 
       <div>
         <h1>{news.title}</h1>
