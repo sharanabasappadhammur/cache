@@ -38,7 +38,8 @@ const Home = () => {
       <MetaDecorator
         description={content.pageDescription}
         title={content.pageTitle}
-        imageUrl={metaThumbnail}
+        // imageUrl={metaThumbnail}
+        imageUrl="https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg"
         imageAlt={content.metaImageAlt}
       />
       <div>hello</div>
