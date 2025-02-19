@@ -39,7 +39,7 @@ const Home = () => {
         description={content.pageDescription}
         title={content.pageTitle}
         // imageUrl={metaThumbnail}
-        imageUrl="https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg"
+        imageUrl="https://sample-videos.com/img/Sample-jpg-image-100kb.jpg"
         imageAlt={content.metaImageAlt}
       />
       <div>hello</div>
